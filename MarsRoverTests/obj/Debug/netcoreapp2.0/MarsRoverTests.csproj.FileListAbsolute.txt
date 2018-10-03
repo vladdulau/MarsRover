@@ -1,0 +1,11 @@
+C:\Users\vlad.dulau\source\repos\MarsRover\MarsRoverTests\bin\Debug\netcoreapp2.0\MarsRoverTests.deps.json
+C:\Users\vlad.dulau\source\repos\MarsRover\MarsRoverTests\bin\Debug\netcoreapp2.0\MarsRoverTests.runtimeconfig.json
+C:\Users\vlad.dulau\source\repos\MarsRover\MarsRoverTests\bin\Debug\netcoreapp2.0\MarsRoverTests.runtimeconfig.dev.json
+C:\Users\vlad.dulau\source\repos\MarsRover\MarsRoverTests\bin\Debug\netcoreapp2.0\MarsRoverTests.dll
+C:\Users\vlad.dulau\source\repos\MarsRover\MarsRoverTests\obj\Debug\netcoreapp2.0\MarsRoverTests.csproj.CoreCompileInputs.cache
+C:\Users\vlad.dulau\source\repos\MarsRover\MarsRoverTests\obj\Debug\netcoreapp2.0\MarsRoverTests.AssemblyInfoInputs.cache
+C:\Users\vlad.dulau\source\repos\MarsRover\MarsRoverTests\obj\Debug\netcoreapp2.0\MarsRoverTests.AssemblyInfo.cs
+C:\Users\vlad.dulau\source\repos\MarsRover\MarsRoverTests\obj\Debug\netcoreapp2.0\MarsRoverTests.csprojAssemblyReference.cache
+C:\Users\vlad.dulau\source\repos\MarsRover\MarsRoverTests\bin\Debug\netcoreapp2.0\MarsRoverTests.pdb
+C:\Users\vlad.dulau\source\repos\MarsRover\MarsRoverTests\obj\Debug\netcoreapp2.0\MarsRoverTests.dll
+C:\Users\vlad.dulau\source\repos\MarsRover\MarsRoverTests\obj\Debug\netcoreapp2.0\MarsRoverTests.pdb
