@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using MarsRover.DAL.DomainData;
 using MarsRover.Domain;
 
 namespace MarsRover.Strategies
@@ -8,11 +9,13 @@ namespace MarsRover.Strategies
     public class RoverMovementStrategy : IRoverMovementStrategy
     {
 
-        private Rover rover;
+        private RoverData _rover;
+        private Coordinates _coordinates;
 
-        public RoverMovementStrategy(Rover rover)
+        public RoverMovementStrategy(RoverData rover, Coordinates coordinates)
         {
-            this.rover = rover;
+            this._coordinates = coordinates;
+            this._rover = rover;
         }
         
    
@@ -23,16 +26,44 @@ namespace MarsRover.Strategies
             {
                 switch (command)
                 {
-                    case ('L'):TurnLeft(); break;
-                    case ('R'):TurnRight(); break;
-                    case ('M'):Move();break;
+                    case ('w'):MoveForward(); break;
+                    case ('s'):MoveBackward(); break;
+                    case ('d'):MoveRight(); break;
+                    case ('a'):MoveLeft();break;
+                    case ('x'):break;
                     default:
                         throw new ArgumentException(string.Format("Invalid : {0}", command));
                 }
             }
         }
 
-      
+        public void MoveForward()
+        {
+            _coordinates.Y++;
+            if (_coordinates.Y > 5)
+                _coordinates.Y = 5;
+        }
+        public void MoveBackward()
+        {
+            _coordinates.Y--;
+            if (_coordinates.Y < 0)
+                _coordinates.Y = 0;
+        }
+        public void MoveLeft()
+        {
+            _coordinates.X--;
+            if (_coordinates.X < 0)
+                _coordinates.X = 0;
+        }
+
+        public void MoveRight()
+        {
+            _coordinates.X++;
+            if (_coordinates.X > 5)
+                _coordinates.X = 5;
+        }
+
+ /*
         private void TurnRight()
         {
             if (rover.Orientation + 1 > Orientation.W)
@@ -74,6 +105,6 @@ namespace MarsRover.Strategies
                 if (rover.Position.X < 0)
                     rover.Position.X = 0;
             }
-        }
+        } */
     }
 }

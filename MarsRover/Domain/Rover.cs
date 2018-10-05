@@ -1,6 +1,9 @@
-﻿using System;
+﻿using MarsRover.DAL.DomainData;
+using System;
 using System.Collections.Generic;
 using System.Text;
+
+
 
 namespace MarsRover.Domain
 {

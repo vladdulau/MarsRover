@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
+using MarsRover.DAL.DomainData;
+using MarsRover.DAL;
 using MarsRover.Domain;
 using MarsRover.Strategies;
 
@@ -9,19 +8,20 @@ namespace MarsRover.Services
 {
     public class RoverController
     {
-        private Rover _rover;
+        private readonly RoverContext _context;
+        private RoverData _rover;
         private readonly IRoverMovementStrategy _roverMovementStrategy;
         private readonly IEnumerable<IEnumerable<Coordinates>> _map;
 
-        public RoverController(Rover rover,
+        public RoverController(RoverData rover,
                                IRoverMovementStrategy roverMovementStrategy,
-                               IEnumerable<IEnumerable<Coordinates>> map)
+                               RoverContext context)
         {
             this._rover = rover;
             this._roverMovementStrategy = roverMovementStrategy;
-            this._map = map;
+            this._context = context;
         }
-        public void ChangeRover(Rover rover) =>
+        public void ChangeRover(RoverData rover) =>
             this._rover = rover;
 
         public void Move(IEnumerable<char> commands)

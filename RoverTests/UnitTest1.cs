@@ -5,6 +5,7 @@ using System;
 using Xunit;
 using System.Collections.Generic;
 using System.Linq;
+using MarsRover.DAL.DomainData;
 
 namespace RoverTests
 {
@@ -66,15 +67,20 @@ namespace RoverTests
             var roverStrategy1 = new RoverMovementStrategy(rover1);
             var roverController1 = new RoverController(rover1, roverStrategy1,map);
 
-            rover1.Position = new Coordinates { X = map.ElementAt(1).ElementAt(3).X, Y = map.ElementAt(1).ElementAt(3).Y }; 
+            rover1.Position = new Coordinates { X = map.ElementAt(1).ElementAt(2).X, Y = map.ElementAt(1).ElementAt(2).Y }; 
 
             rover1.Orientation = Orientation.E;
            
-            var rover1Commands = "MM";
-            roverController1.Move(rover1Commands);
+            var roverCommands1 = "M";
+            roverController1.Move(roverCommands1);
 
-            Assert.Equal(3,rover1.Position.X);
-            Assert.Equal(3,rover1.Position.Y);
+            Assert.Equal(2,rover1.Position.X);
+            Assert.Equal(2,rover1.Position.Y);
+
+            var roverCommands2 = "MMMM";
+            roverController1.Move(roverCommands2);
+            Assert.Equal(5, rover1.Position.X);
+            Assert.Equal(2, rover1.Position.Y);
 
             //Arrange
             //Act

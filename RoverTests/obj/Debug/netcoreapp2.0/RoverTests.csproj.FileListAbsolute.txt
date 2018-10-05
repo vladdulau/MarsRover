@@ -15,3 +15,5 @@ C:\Users\vlad.dulau\source\repos\MarsRover\RoverTests\obj\Debug\netcoreapp2.0\Ro
 C:\Users\vlad.dulau\source\repos\MarsRover\RoverTests\bin\Debug\netcoreapp2.0\MarsRover.dll
 C:\Users\vlad.dulau\source\repos\MarsRover\RoverTests\bin\Debug\netcoreapp2.0\MarsRover.pdb
 C:\Users\vlad.dulau\source\repos\MarsRover\RoverTests\obj\Debug\netcoreapp2.0\RoverTests.csproj.CopyComplete
+C:\Users\vlad.dulau\source\repos\MarsRover\RoverTests\bin\Debug\netcoreapp2.0\MarsRover.DAL.dll
+C:\Users\vlad.dulau\source\repos\MarsRover\RoverTests\bin\Debug\netcoreapp2.0\MarsRover.DAL.pdb
